@@ -15,12 +15,17 @@ namespace ap
                 {
                     if(argv[argi+1] == NULL || argv[argi+1] == keys_list[keyi]) 
                     {
-                        out_map["error"] = key + "wrong command, use --help";
+                        out_map["error"] = keys_list[keyi] + "wrong command, use --help";
                         return out_map;
                     }
+                    out_map[keys_list[keyi]] = argv[argi+1];
+                    ++keyi;
+                }
+                else
+                {
+                    out_map["error"] = "SordDesktop doesnt have '" + argv[argi] + "' commandn, use --help";  
                 }
             }
-            out_map[keys_list[keyi]] = argv[argi+1];
         }            
         return out_map; 
     }
