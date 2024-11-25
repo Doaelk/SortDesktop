@@ -1,7 +1,11 @@
 {
-    "path":[""],
-    "file_format_move":{
-       "path1":[""] 
-    },
-    "file_format_delete": [""] 
+    "paths":[
+        ["from","to"]
+    ],
+    "file_format_move":[
+        ["format"] 
+    ],
+    "file_format_delete":[
+        ["from","format"] 
+    ] 
 }

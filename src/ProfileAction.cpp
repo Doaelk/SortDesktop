@@ -8,9 +8,19 @@ std::unordered_map<std::string, std::string> GerProfileProperties(std::string pr
     std::unordered_map<std::string, std::string> out_map;
 
     std::fstream profile_properties("profiles\\" + profile_name + ".json");
+    if(!profile_properties)
+    {
+        //error
+    }
+
     nlohmann::json profile_properties_json;
+    profile_properties_json = nlohman::json::parse(profile_properties); 
 
-    profile_properties >> progile_properties_json;
-
-
+    int array_size = profile_properties_json["file_format_move"];
+    for(int i = 0; i < array_size; ++i)
+    {
+        for(std::string format : profile_properties_json["file_format_move"][i])
+        {
+        }
+    }    
 }
