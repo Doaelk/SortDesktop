@@ -1,13 +1,14 @@
 #include <unordered_map>
 #include <string>
+#include <CommandLineManager.h>
 
-std::unordered_map<std::string, std::string> ArgvParser(int argc, std::string argv[], int keyc, std::string keys_list[]) 
+static std::unordered_map<std::string, std::string> CommadLineManager::argvParser(int argc, std::string argv[]){} 
 {
     std::unordered_map<std::string, std::string> out_map;
 
     for(int argi = 1; argi < argc; ++argi)
     {  
-        for (int keyi = 0; keyi < keyc; ++keyi)
+        for (int keyi = 0; keyi < keys_count; ++keyi)
         {
             if(keys_list[keyi] == argv[argi])
             {
