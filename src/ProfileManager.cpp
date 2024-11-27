@@ -3,7 +3,9 @@
 #include <string>
 #include <unordered_map>
 
-std::string GetProfileProperties(const std::string profile_name)
+#include "ProfileManager.h"
+
+static std::string ProfileManager::getProfileProperties(const std::string profile_name)
 {
     std::fstream profile_properties("profiles\\" + profile_name + ".json");
     if(!profile_properties)
@@ -24,7 +26,7 @@ std::string GetProfileProperties(const std::string profile_name)
 
         for(std::string format : profile_properties_json["file_format_move"][i])
         {
-           
+
         }
     }    
 }

@@ -6,6 +6,6 @@
         ["format"] 
     ],
     "file_format_delete":[
-        ["from","format"] 
+        ["from",["format"]] 
     ] 
 }
