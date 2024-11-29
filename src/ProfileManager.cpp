@@ -30,3 +30,8 @@ static std::string ProfileManager::getProfileProperties(const std::string profil
         }
     }    
 }
+
+static PathFormat& ProfileManager::operator[](const int index)
+{
+    return profileSetting[index];
+}       

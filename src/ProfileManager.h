@@ -11,10 +11,15 @@ class ProfileManager
             int formats_count;
         }
 
-        PathFormat* profileSetting;
+        static PathFormat* profileSetting;
 
     public:     
-        ProfileManager(int size, std::string path_from, std::string path_to, std::string* formats;)
+        static std::string getProfileProperties(const std::string profile_name);
+
+        static ProfileManager(int size)
         {
+            profileSetting = new PathFormat[size]; 
         }
+
+        static PathFormat& opertator[](const int index);
 }
